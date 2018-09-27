@@ -1,0 +1,11 @@
+{
+  "title"  : "Kinski Gun",
+  "type"   : "weapon",
+  "tags"   : ["fun"],
+  "ignore" :
+  [
+    "*.psd",
+    "*.vcproj",
+    "*.svn*"
+  ]
+}
