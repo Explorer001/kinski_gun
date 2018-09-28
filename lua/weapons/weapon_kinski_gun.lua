@@ -38,9 +38,11 @@ SWEP.UseHands              = true
 SWEP.ViewModelFlip         = false
 SWEP.ViewModelFOV          = 54
 
+SWEP.Icon                  = "kinski/ttt_icon.png"
+SWEP.WepSelectIcon         = Material("kinski/ttt_icon.png")
+
 SWEP.Kind                  = WEAPON_PISTOL
 SWEP.AmmoEnt               = "fooammo"
-SWEP.SpawnMenuIcon         = "vgui/entities/weapon_deagle"
 SWEP.ViewModel             = Model("models/weapons/cstrike/c_pist_deagle.mdl")
 SWEP.WorldModel            = Model("models/weapons/w_pist_deagle.mdl")
 
