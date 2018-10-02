@@ -1,6 +1,9 @@
 --GMod config stuff
 
 AddCSLuaFile()
+resource.AddFile("sound/weapons/kinski/dumme_sau.mp3")
+resource.AddFile("sound/weapons/kinski/kirchenjesus.mp3")
+resource.AddFile("materials/kinski/ttt_icon.png")
 
 SWEP.PrintName = "Kinski Gun"
 
@@ -16,7 +19,7 @@ SWEP.Base = "weapon_tttbase"
 --Standard GMod values
 SWEP.DrawAmmo              = false
 SWEP.Primary.Recoil        = 5.1
-SWEP.Primary.Damage        = 100
+SWEP.Primary.Damage        = 150
 SWEP.Primary.Delay         = 1
 SWEP.Primary.NumShots      = 1
 SWEP.Primary.Cone          = 0.01
@@ -73,7 +76,7 @@ function SWEP:PrimaryAttack()
     
     
     self:EmitSound("weapons/kinski/dumme_sau.mp3", 75, 100, 1, CHAN_AUTO)
-    
+    self.LoopSound:ChangeVolume(1, 0.1)
     if SERVER then
       sound.Play("weapons/kinski/dumme_sau.mp3", self:GetPos(), 1)
     end
@@ -90,7 +93,7 @@ function SWEP:Deploy()
   if (!self.LoopSound) then
     self.LoopSound = CreateSound(self.Owner, Sound("weapons/kinski/kirchenjesus.mp3"))
     if (self.LoopSound) then self.LoopSound:Play() end
-    self.LoopSound:ChangeVolume(0.25, 0.1)
+    self.LoopSound:ChangeVolume(1, 0.1)
   end
 end
 
